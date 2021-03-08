@@ -27,7 +27,7 @@ or conforming to the 2-char tagging schema are processed.
 While mostly arbitrary, pointy brackets and pipes (`<`, `>`, `|`) were chosen as delimiters because 
 1. they're part of ASCII (occupy single byte),
 2. less likely to be found in english text than parens and commas, and
-3. not part of stringified JSON (common practice despite being bad-practice!?)
+3. not part of stringified JSON. Even though it's bad practice to stringify JSON objects for use as keys, I don't want to make it worse by url-encoding the entire thing.
 
 Round-tripping a key will process it according to KV Storage working draft:
 <https://wicg.github.io/kv-storage/#key-round-trip>
