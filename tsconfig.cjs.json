@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2020",
+      "WebWorker",
+    ],
+    "target": "ES2015",
+    "outDir": "cjs",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "module": "CommonJS",
+  },
+  "include": [
+    "index.ts"
+  ],
+  "exclude": [],
+}

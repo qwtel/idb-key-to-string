@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2020",
+      "WebWorker",
+    ],
+    "target": "ES2019",
+    "outDir": ".",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+  },
+  "include": [
+    "index.ts"
+  ],
+  "exclude": []
+}

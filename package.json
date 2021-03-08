@@ -1,0 +1,40 @@
+{
+  "name": "idb-key-to-string",
+  "version": "0.0.0",
+  "description": "A simple string serialization for IndexedDB-like keys",
+  "type": "module",
+  "files": [
+    "index*",
+    "cjs",
+    "tsconfig*.json"
+  ],
+  "main": "cjs/index.js",
+  "module": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./cjs/index.cjs"
+    }
+  },
+  "types": "./index.d.ts",
+  "scripts": {
+    "clean": "shx rm -rf cjs *.js *.js.map *.d.ts*",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "prepack": "npm run clean && npm run build",
+    "build": "npm run build:mjs & npm run build:cjs & wait",
+    "build:mjs": "tsc -d -p tsconfig.json",
+    "build:cjs": "tsc -d -p tsconfig.cjs.json && npm run sed && npm run mv",
+    "sed": "shx sed -i 's/\\.(.*)\\.js/\\.$1\\.cjs/g' cjs/*.js > /dev/null ",
+    "mv": "for f in cjs/*.js; do shx mv \"$f\" \"${f%.js}.cjs\"; done"
+  },
+  "author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "base64-encoding": "^0.14.3",
+    "kv-storage-interface": "^0.2.0"
+  },
+  "devDependencies": {
+    "shx": "^0.3.3",
+    "typescript": "^4.2.3"
+  }
+}
