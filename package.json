@@ -18,8 +18,8 @@
   },
   "types": "./index.d.ts",
   "scripts": {
-    "clean": "shx rm -rf cjs *.js *.js.map *.d.ts*",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "clean": "shx rm -rf cjs *.js *.js.map *.d.ts* *.tgz",
+    "test": "npm run build:mjs && node test/index.js",
     "prepack": "npm run clean && npm run build",
     "build": "npm run build:mjs & npm run build:cjs & wait",
     "build:mjs": "tsc -d -p tsconfig.json",
@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/qwtel/idb-key-to-string/issues"
   },
-  "homepage": "https://github.com/qwtel/idb-key-to-string#readme"
+  "homepage": "https://github.com/qwtel/idb-key-to-string#readme",
+  "directories": {
+    "test": "test"
+  }
 }

@@ -18,8 +18,8 @@ Below are some notable examples:
 new Date(0)       => 'd:1970-01-01T00:00:00.000Z'
 ['foo', 'bar']    => '<foo|bar>'
 ['foo', [1, 2]]   => '<foo|<n:1|n:2>>'
-'with|re<served>' => 's:with%7Cre%5Bserved%5D' // URL encoding iff necessary
-'e:vil'           => 's:e%3vil'
+'with|re<served>' => 's:with%7Cre%3Cserved%3E' // URL encoding iff necessary
+'e:vil'           => 's:e%3Avil'
 ```
 
 The last two examples show how strings containing array delimiters 
