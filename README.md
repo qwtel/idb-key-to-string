@@ -1,8 +1,7 @@
 # IDB Key to String
 A simple string serialization for IndexedDB-like keys.
 
-Many key-value stores only allow string keys, but in JavaScript we'd like to use (composed) IndexedDB-like keys.
-A format is needed to convert between the two.
+Many key-value stores only support string-based keys, but in JavaScript we'd like to use (composed) IndexedDB-like keys.
 
 The goal of this format is human readability, minimal tagging, and leaving regular strings unmodified,
 so that the most common case carries no extra weight.
