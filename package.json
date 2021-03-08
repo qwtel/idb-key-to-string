@@ -1,6 +1,6 @@
 {
   "name": "idb-key-to-string",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A simple string serialization for IndexedDB-like keys",
   "type": "module",
   "files": [
